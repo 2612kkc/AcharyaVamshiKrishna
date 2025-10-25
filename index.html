@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<!-- saved from url=(0027)file:///C:/vamsi/index.html -->
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  
+<html lang="te">
+<head>
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>శ్రీ లక్ష్మీనారసింహ జ్యోతిష్యayload — Temple Event</title>
-  <!-- Telugu font -->
-  <link href="./index_files/css2" rel="stylesheet">
+  <title>శ్రీ లక్ష్మీనారసింహ జ్యోతిష్యాలయం — Temple Event</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Telugu:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
 <style>
   :root{
-    --accent:#f57c00;       /* Saffron orange */
-    --accent-dark:#e65100;  /* Darker orange for contrast */
+    --accent:#f57c00;
+    --accent-dark:#e65100;
     --muted:#6b6b6b;
     --card:#ffffff;
   }
   *{box-sizing:border-box}
   body{
-    font-family:Montserrat,system-ui,Arial,sans-serif;
+    font-family:Montserrat,'Noto Sans Telugu',Arial,sans-serif;
     margin:0;
     background:linear-gradient(180deg,#fff5e6 0%, #fffaf3 100%);
     color:#222;
@@ -28,199 +29,146 @@
     gap:16px;
     align-items:center;
   }
-  .logo{display:flex;gap:12px;align-items:center}
   .logo img{width:72px;height:72px;border-radius:8px;object-fit:cover}
-  .title{font-family:'Noto Sans Telugu', 'Montserrat', sans-serif}
-  .title h1{margin:0;font-size:28px;line-height:1}
-  .title p{margin:2px 0 0;font-size:13px;opacity:.95}
-  nav{margin-left:auto}
-  nav button{
-    background:rgba(255,255,255,.15);
-    border:1px solid rgba(255,255,255,.2);
-    color:#fff;
-    padding:8px 12px;
-    border-radius:6px;
-    margin-left:8px;
-    cursor:pointer;
+  .title h1{margin:0;font-size:28px}
+  .hero{
+    display:grid;
+    grid-template-columns:1fr 360px;
+    gap:18px;
+    align-items:flex-start;
   }
-  nav button:hover{
-    background:rgba(255,255,255,.25);
-  }
-
-  main{max-width:1100px;margin:22px auto;padding:0 16px}
-  .hero{display:grid;grid-template-columns:1fr 360px;gap:18px;align-items:start}
   .card{
     background:var(--card);
     border-radius:12px;
     padding:18px;
     box-shadow:0 6px 20px rgba(245,124,0,.12);
   }
-  .event-title{font-family:'Noto Sans Telugu';font-size:22px;color:var(--accent-dark);margin:0}
-  .event-sub{color:var(--muted);margin-top:6px}
-  .event-details{margin-top:12px;line-height:1.6;font-size:15px}
-
-  .right-col .poster{width:100%;border-radius:10px;object-fit:cover}
-  .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:16px}
-
-  .priest{display:flex;gap:12px;align-items:center}
-  .priest img{width:120px;height:120px;border-radius:8px;object-fit:cover}
-  .contact{font-weight:700;color:var(--accent-dark)}
-
-  .gallery{display:flex;flex-direction:column;gap:10px}
-  .thumbs{display:flex;flex-wrap:wrap;gap:8px}
-  .thumbs img{width:120px;height:80px;object-fit:cover;border-radius:6px}
-
-  footer{max-width:1100px;margin:28px auto;padding:18px 16px;color:#444}
+  .thumbs{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+    margin-top:16px;
+  }
+  .thumbs img{
+    width:160px;
+    height:110px;
+    border-radius:6px;
+    object-fit:cover;
+  }
   .map{width:100%;height:260px;border:0;border-radius:10px}
-
-  .telugu{font-family:'Noto Sans Telugu',sans-serif}
-
-  @media (max-width:900px){
+  @media(max-width:900px){
     .hero{grid-template-columns:1fr}
-    .right-col{order:-1}
+    aside{order:-1}
   }
 </style>
+
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="./index_files/WhatsApp Image 2025-10-12 at 11.52.03.jpeg" alt="temple">
-      <div class="title">
-        <h1 class="telugu">శ్రీ లక్ష్మీనారసింహ జ్యోతిష్యాలయం</h1>
-        <p>గ్రామం — (రేవోజిపేట్), మండలం — (దస్తురాబాద్), జిల్లా — (నిర్మల్)  <!-- replace with actual --></p>
+
+<header>
+ <div class="logo">
+    <img src="./index_files/WhatsApp Image 2025-10-12 at 11.52.03.jpeg" alt="temple">
+  </div>
+  <div class="title">
+    <h1 class="telugu" data-lang="te">శ్రీ లక్ష్మీనారసింహ జ్యోతిష్యాలయం</h1>
+    <h1 class="english" data-lang="en" style="display:none;">Sri Lakshmi Narasimha Jyotishyalayam</h1>
+
+    <p class="telugu" data-lang="te">గ్రామం — రేవోజిపేట్, మండలం — దస్తురాబాద్, జిల్లా — నిర్మల్</p>
+    <p class="english" data-lang="en" style="display:none;">Village — Revojipet, Mandal — Dasturabad, District — Nirmal</p>
+  </div>
+  <nav style="margin-left:auto;">
+    <button id="btnTel">తెలుగు</button>
+    <button id="btnEng">English</button>
+  </nav>
+</header>
+
+<main>
+<section class="hero">
+
+  <div class="card left-col">
+    <h2 class="event-title telugu" data-lang="te">జ్యోతిష్యాలయం — ప్రత్యేకథలు</h2>
+    <h2 class="event-title english" data-lang="en" style="display:none;">Jyothishyaalayam — Specialities</h2>
+
+    <ul style="margin-top:10px;padding-left:20px">
+      <li><span class="telugu" data-lang="te">ప్రతిరోజూ పూజ, అర్చన మరియు హోమాలు,పంచాంగ నిర్ణయాలు</span><span class="english" data-lang="en" style="display:none;">Daily puja, archana, homams and Panchanga guidance</span></li>
+      <li><span class="telugu" data-lang="te">పండుగల సమయంలో ప్రత్యేక పూజలు</span><span class="english" data-lang="en" style="display:none;">Special poojas during festivals</span></li>
+      <li><span class="telugu" data-lang="te">సంస్కారాలు (మతపరమైన కర్మలు) నిర్వహించడం</span><span class="english" data-lang="en" style="display:none;">Conducting samskaras (religious rites)</span></li>
+      <li><span class="telugu" data-lang="te">ఆధ్యాత్మిక మార్గదర్శనం మరియు ఉపన్యాసాలు</span><span class="english" data-lang="en" style="display:none;">Spiritual guidance and discourses</span></li>
+    </ul>
+
+    <div style="margin-top:14px">
+      <h3 class="telugu" data-lang="te">నిర్వాహకులు</h3>
+      <h3 class="english" data-lang="en" style="display:none;">Priest</h3>
+
+      <div class="priest" style="display:flex;gap:12px;align-items:center;">
+        <img src="./index_files/vamshipic.jpeg"" alt="Priest" style="width:120px;height:120px;border-radius:8px;object-fit:cover;">
+        <div>
+          <div class="contact telugu" data-lang="te">మీ. ఆచార్య వంశీకృష్ణ</div>
+          <div class="contact english" data-lang="en" style="display:none;">Acharya Vamshi Krishna</div>
+
+          <div>Cell: <a href="tel:9000903434">9000903434</a></div>
+
+          <div style="margin-top:8px;font-size:14px;color:var(--muted)" class="telugu" data-lang="te">వైదిక సేవలు, పూజలు, సంప్రదింపులు</div>
+          <div style="margin-top:8px;font-size:14px;color:var(--muted);display:none;" class="english" data-lang="en">Vedic services and consultations</div>
+        </div>
       </div>
     </div>
-    <nav>
-      <button id="btnTel">తెలుగు</button>
-      <button id="btnEng">English</button>
-    </nav>
-  </header>
 
-  <main>
-    <section class="hero">
-      <div class="card left-col">
-        <h2 class="event-title telugu" id="headingTel">జ్యోతిష్యాలయం — ప్రత్యేక ఉత్సవాలు</h2>
-        <p class="event-sub" id="subTel">తేది: 20-10-2025 — ప్రత్యేక కార్యక్రమాలు</p>
-        <div class="event-details" id="detailsTel">సమయ సూచనలు, కార్యక్రమ వివరణలు, పండుగ వివరాలు ఇక్కడ చూపబడతాయి.<br><br>- తేది: 20-10-2025 — నరక చతుర్ధశి మంగళాహారాలు<br>- తేది: 21-10-2025 — చేసే శ్రద్ధా వ్రతం</div>
+    <div style="margin-top:18px">
+      <h3 class="telugu" data-lang="te">గ్యాలరీ</h3>
+      <h3 class="english" data-lang="en" style="display:none;">Gallery</h3>
 
-        <div style="margin-top:14px">
-          <h3 class="telugu">నిర్వాహకులు</h3>
-          <div class="priest">
-            <img src="./index_files/vamshipic.jpeg" alt="priest">
-            <div>
-              <div class="contact">మీ. ఆచార్య వంశీకృష్ణ</div>
-              <div>Cell: <a href="tel:9000903434">9000903434</a></div>
-              <div style="margin-top:8px;font-size:14px;color:var(--muted)">వైదిక సేవలు, పూజలు, సంప్రదింపులు</div>
-            </div>
-          </div>
-        </div>
-
-        <div style="margin-top:18px">
-          <h3 class="telugu">గ్యాలరీ</h3>
-          <div class="gallery card" style="padding:12px">
-            <input type="file" id="imgUpload" accept="image/*" multiple="">
-            <div class="thumbs" id="thumbs"><img src="blob:null/bd4282c3-4960-4aa3-8799-5402d887adaf"><img src="blob:null/b75590c1-51db-438b-bd47-919e2299f4e7"><img src="blob:null/d7273a4d-a482-457b-9d47-a191f836b396"><img src="blob:null/1aaf23f8-2cbc-44c9-9fab-51b5889745f8"><img src="blob:null/48071f19-82a0-48de-88f4-47495aa254e6"></div>
-            <small class="telugu">చిత్రాలు అప్ప్లోడ్ చేయండి — బ్రౌజర్‌లో వేరు సేవ అవసరం లేదు.</small>
-          </div>
-        </div>
+      <div class="thumbs">
+        <img src="images/temple-night.jpg" alt="Temple night">
+        <img src="images/pooja.jpg" alt="Pooja">
+        <img src="images/steps.jpg" alt="Temple Steps">
+        <img src="images/crowd.jpg" alt="Devotees gathering">
+        <img src="images/mandapam.jpg" alt="Mandapam">
       </div>
-
-      <aside class="right-col">
-        <div class="card">
-          <img class="poster" id="poster" src="blob:null/bf76f477-4342-4680-b813-389d5eae0e7c" alt="Drop or click to set poster" style="height: auto; min-height: 200px; background: rgb(247, 249, 251); display: block; object-fit: contain;">
-          <p style="margin-top:10px;font-size:14px;color:var(--muted)">ఫ్లయర్ ఇమేజ్ లేదా ఈవెంట్ పోస్టర్ ఇక్కడ చూపబడుతుంది.</p>
-        </div>
-
-        <div class="card" style="margin-top:12px">
-          <h4 class="telugu">ఈవెంట్ శీఘ్ర వివరాలు</h4>
-          <p><strong>తేది:</strong> 20-21 అక్టోబర్ 2025</p>
-          <p><strong>స్థలం:</strong> గ్రామ రేశవపేట</p>
-          <p><strong>తేది సమాచారం / సంప్రదింపులు:</strong> <a href="tel:9000903434">9000903434</a></p>
-        </div>
-      </aside>
-    </section>
-
-    <section class="card" style="margin-top:18px">
-       <div style="margin-top:14px">
-        <h4 class="telugu">Map</h4>
-        <!-- Replace src with real Google Maps embed URL -->
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.7117264611115!2d78.9170548!3d19.079281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcd650f31990b1d%3A0xe9b605787863cc68!2z4LC54LCw4LC_IOCwueCwsCDgsJXgsY3gsLfgsYfgsKTgsY3gsLDgsII!5e1!3m2!1sen!2sin!4v1760972115827!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div>
-        <strong class="telugu">శ్రీ లక్ష్మీనారసింహ జ్యోతిష్యాలయం</strong>
-        <div style="color:var(--muted);font-size:14px">Contact: <a href="tel:9000903434">9000903434</a></div>
-      </div>
-      <div style="font-size:13px;color:var(--muted)">Design by — KC Technological services</div>
     </div>
-  </footer>
 
-  <script>
-    // Small JS for interactivity: language toggle, gallery and poster image
-    const telText = {
-      heading: 'జ్యోతిష్యాలయం — ప్రత్యేక ఉత్సవాలు',
-      sub: 'తేది: 20-10-2025 — ప్రత్యేక కార్యక్రమాలు',
-      details: `సమయ సూచనలు, కార్యక్రమ వివరణలు, పండుగ వివరాలు ఇక్కడ చూపబడతాయి.\n\n- తేది: 20-10-2025 — నరక చతుర్ధశి మంగళాహారాలు\n- తేది: 21-10-2025 — చేసే కేదారీశ్వర వ్రతం వ్రతం`
-    }
-    const enText = {
-      heading: 'Sri Lakshmi Narasimha Jyothishyaalayam — Events',
-      sub: 'Date: 20-10-2025 — Special programs',
-      details: `Schedule, program descriptions and festival details will appear here.\n\n- 20-10-2025: Special rituals\n- 21-10-2025: Kedaareshwara Vratam`
-    }
+  </div>
 
-    document.getElementById('btnTel').onclick = ()=> setLang('tel');
-    document.getElementById('btnEng').onclick = ()=> setLang('eng');
+  <!-- Right Column Empty because Flyer Removed -->
+  <aside></aside>
 
-    function setLang(l){
-      if(l==='tel'){
-        document.getElementById('headingTel').textContent = telText.heading;
-        document.getElementById('subTel').textContent = telText.sub;
-        document.getElementById('detailsTel').innerHTML = telText.details.replace(/\n/g,'<br>');
-      } else {
-        document.getElementById('headingTel').textContent = enText.heading;
-        document.getElementById('subTel').textContent = enText.sub;
-        document.getElementById('detailsTel').innerHTML = enText.details.replace(/\n/g,'<br>');
-      }
-    }
+</section>
 
-    // Gallery upload
-    const upload = document.getElementById('imgUpload');
-    const thumbs = document.getElementById('thumbs');
-    upload.addEventListener('change', (e)=>{
-      thumbs.innerHTML='';
-      Array.from(e.target.files).forEach(file=>{
-        const url = URL.createObjectURL(file);
-        const img = document.createElement('img'); img.src = url; thumbs.appendChild(img);
-      })
-    })
+<section class="card" style="margin-top:18px">
+  <h4 class="telugu" data-lang="te">Map</h4>
+  <h4 class="english" data-lang="en" style="display:none;">Map</h4>
 
-    // Poster - if user drags/drops flyer image onto the poster element, show it
-    const poster = document.getElementById('poster');
-    poster.alt = 'Drop or click to set poster';
-    poster.style.height = 'auto'; poster.style.minHeight = '200px'; poster.style.background = '#f7f9fb'; poster.style.display='block'; poster.style.objectFit='contain';
-    poster.addEventListener('click', ()=>{
-      const inp = document.createElement('input'); inp.type='file'; inp.accept='image/*'; inp.onchange = (e)=>{
-        const f = e.target.files[0]; if(!f) return; poster.src = URL.createObjectURL(f);
-      }; inp.click();
-    });
+  <iframe class="map"
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d980.7117264611115!2d78.9170548!3d19.079281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcd650f31990b1d%3A0xe9b605787863cc68!2z4LC54LCw4LC_IOCwueCwsCDgsJXgsY3gsLfgsYfgsKTgsY3gsLDgsII!5e1!3m2!1sen!2sin!4v1760972115827!5m2!1sen!2sin"
+    loading="lazy"></iframe>
+</section>
+</main>
 
-    // Simple form "send" (client-only) - replace with real backend when ready
-    document.getElementById('send').addEventListener('click', ()=>{
-      const n = document.getElementById('name').value || '(no name)';
-      const p = document.getElementById('phone').value || '(no phone)';
-      const s = document.getElementById('service').value;
-      const m = document.getElementById('msg').value;
-      document.getElementById('formResp').textContent = `Thanks ${n}! We'll contact you at ${p}.`;
-      // Here you can send data to server via fetch() to your backend endpoint
-    })
+<footer>
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;">
+    <div>
+      <strong class="telugu" data-lang="te">శ్రీ లక్ష్మీనారసింహ జ్యోతిష్యాలయం</strong>
+      <strong class="english" data-lang="en" style="display:none;">Sri Lakshmi Narasimha Jyotishyalayam</strong>
+      <div style="color:var(--muted)" class="telugu" data-lang="te">సంప్రదించండి: <a href="tel:9000903434">9000903434</a></div>
+      <div style="color:var(--muted);display:none" class="english" data-lang="en">Contact: <a href="tel:9000903434">9000903434</a></div>
+    </div>
+    <div style="font-size:13px;color:var(--muted)" class="telugu" data-lang="te">Design by — KC Technological services</div>
+    <div style="font-size:13px;color:var(--muted);display:none" class="english" data-lang="en">Design by — KC Technological services</div>
+  </div>
+</footer>
 
-    // initialize language as Telugu
-    setLang('tel');
-  </script>
+<script>
+// ✅ Language Toggle
+function setLang(lang){
+  document.querySelectorAll("[data-lang]").forEach(el=>{
+    el.style.display = (el.getAttribute("data-lang") === lang) ? "" : "none";
+  });
+  localStorage.setItem("lang",lang);
+}
+btnTel.onclick=()=>setLang("te");
+btnEng.onclick=()=>setLang("en");
+setLang(localStorage.getItem("lang") || "te");
+</script>
 
-
-</body></html>
+</body>
+</html>
